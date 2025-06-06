@@ -1,0 +1,7 @@
+echo "# Kutsaka-Horizon-Tours" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/Kutsaka2004/Kutsaka-Horizon-Tours.git
+git push -u origin main

@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="60.css">
+  <title>Line Navigation Bar</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-image: url('images/cover6.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .navbar {
+      background-color: #333;
+      border-bottom: 2px solid #1abc9c;
+      display: flex;
+      justify-content: center;
+      padding: 30px 0;
+    }
+
+    .navbar a {
+      color: #ffffff;
+      text-decoration: none;
+      padding: 10px 20px;
+      font-weight: bold;
+      transition: color 0.3s, border-bottom 0.3s;
+      border-bottom: 2px solid transparent;
+      cursor: pointer;
+    }
+
+    .navbar a:hover {
+      color: #1abc9c;
+      border-bottom: 2px solid #1abc9c;
+    }
+
+    .section {
+      display: none;
+      padding: 40px;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .section h2 {
+      color: #1abc9c;
+      margin-bottom: 20px;
+    }
+
+    .section p {
+      line-height: 1.6;
+      color: #333;
+    }
+
+
+
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <a onclick="showHome()">Home</a>
+    <a onclick="Login()">Login</a>
+    <a href="cart.html">Cart</a> 
+    <a onclick="ContactUs()">Contact Us</a>
+    <a onclick="FindYoutour()">Find Your Tour</a>
+    <a onclick="BecomeaGuide()">Become a Guide</a>
+    <a onclick="showAbout()">About Us</a>
+    <a onclick="SocialMedia()">Social Media</a>
+  </nav>
+
+
+  <!-- Home Section -->
+  <section id="home" class="section">
+    <h1>Welcome to Kutsaka Horizon Tours</h1>
+    <p>Explore authentic African adventures with local guides. Whether you're looking for a safari, cultural immersion, or thrilling outdoor experiences, we connect you with the best local experts to make your journey unforgettable.</p>
+    <p>Start your adventure today and discover the heart of Africa with us!</p>
+  
+
+<table style="width: 100%; border-collapse: separate; border-spacing: 30px;">
+  <tr>
+    <td style="
+      padding: 20px;
+      background-image: url('images/safari.jpg');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      height: 300px;
+      vertical-align: :top;
+    ">
+      <h3>Safari Adventures</h3>
+      <img src="images/safari.jpg" alt="Safari Experience">
+      <p>Experience the wild like never before. Our safari tours take you deep into Africa’s most iconic game reserves.</p>
+      <a href="safai-tours.html" style="color: #000; font-weight: bold;">Explore Safari Tours »</a>
+    </td>
+
+    <td style="
+      padding: 20px;
+      background-image: url('mages/cultural.jpg');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      height: 300px;
+      vertical-align: top;
+    ">
+      <h3>Cultural Experiences</h3>
+      <img src="images/cultural.jpg" alt="Cultural Experience">
+      <p>Connect with local communities, explore traditions, and discover the rich heritage of Southern Africa.</p>
+      <a href="cultural-tours.html" style="color: #000; font-weight: bold;">Discover Cultural Tours »</a>
+    </td>
+
+    <td style="
+      padding: 20px;
+      background-image: url('images/adventure.jpg');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      height: 300px;
+      vertical-align: top;
+    ">
+      <h3>Adventure Tours</h3>
+      <img src="images/adventure.jpg" alt="Safari Experience">
+      <p>From ziplining to hot air ballooning, our adventure packages are perfect for thrill-seekers and explorers.</p>
+      <a href="adventure-tours.html" style="color: #000; font-weight: bold;">View Adventure Tours »</a>
+    </td>
+  </tr>
+</table>
+
+  </section>
+
+  <!---- User Login-->
+<section id="Login" class="section">
+  <h1>User Login</h1>
+
+  <form id="loginForm" style="max-width: 600px; margin-top: 20px;">
+    <label for="name">Username:</label><br>
+    <input type="text" id="name" name="name" required style="width: 100%; padding: 10px; margin-bottom: 15px;"><br>
+
+    <label for="password">Password:</label><br>
+    <input type="password" id="password" name="password" required style="width: 100%; padding: 10px; margin-bottom: 15px;"><br>
+
+    <input type="checkbox" id="remember" name="remember">
+    <label for="remember">Remember Me</label><br>
+
+    <button type="submit" style="background-color: #1abc9c; color: white; padding: 10px 20px; border: none; cursor: pointer;">Login</button>
+  </form>
+
+  <p class="forgot-password"><a href="#">Forgot Password?</a></p>
+
+  <p class="register-link">Don't have an account? <a href="#" onclick="showSignup()">Sign up</a></p>
+</section>
+
+<section id="Signup" class="section" style="display: none;">
+  <h1>Sign Up</h1>
+
+  <form id="signupForm" style="max-width: 600px; margin-top: 20px;">
+    <label for="newName">Username:</label><br>
+    <input type="text" id="newName" name="newName" required style="width: 100%; padding: 10px; margin-bottom: 15px;"><br>
+
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" required style="width: 100%; padding: 10px; margin-bottom: 15px;"><br>
+
+    <label for="newPassword">Password:</label><br>
+    <input type="password" id="newPassword" name="newPassword" required style="width: 100%; padding: 10px; margin-bottom: 15px;"><br>
+
+    <button type="submit" style="background-color: #1abc9c; color: white; padding: 10px 20px; border: none; cursor: pointer;">Sign Up</button>
+  </form>
+
+  <p class="login-link">Already have an account? <a href="#" onclick="showLogin()">Login</a></p>
+</section>
+  
+ </section>
+
+  <!----- About Us Section -->
+  <section id="about-us" class="section">
+    <h1>About Us</h1>
+    <p><strong>Kutsaka Horizon Tours</strong> is a proudly African travel company dedicated to connecting explorers with authentic, local experiences. Founded with a passion for culture, nature, and community, we specialize in curating unforgettable journeys across Southern Africa.</p>
+    <p>Our mission is to empower local tour guides and communities by offering travelers immersive adventures that go beyond the typical tourist path. Whether you're seeking a thrilling safari, a cultural deep dive, or a scenic escape, we ensure every trip is meaningful and memorable.</p>
+    <p>With a team of experienced guides, sustainable practices, and a deep respect for the land and its people, Kutsaka Horizon Tours invites you to discover Africa through the eyes of those who know it best — its locals. Whether it's a safari under the African sun or a cultural immersion unlike any other, we bring adventure to life.</p>
+    <p>Born from a deep love for nature and heritage, Kutsaka Horizon Tours was founded to connect travelers with the raw beauty of South Africa. We balieve every tour should tell a story of landscapes, wildlike, and people. That's what makes us different.</p>
+    
+    <h1>What we offer</h1>
+    <p><strong>Safari Adventures</strong> - Unforgettable wildlife safaris.</p>
+    <p><strong>Cultural Experiences</strong> - Dive into South African traditions.</p>
+    <p><strong>Thrilling Expeditions</strong> - Dive into South African traditions.</p>
+
+    <h1>What does Kutsaka Horizon Tours stand for?</h1>
+    <p>We are committed to offering ethical, immersive tourism that respects nature and local communities. Our guides are experts, our tours are unforgettable, and our passion for South Africa runs deep.</p>
+
+    <p><strong>Ready to embark on the journey of a lifetime? Let's make memories together!</strong></p>
+
+    <a href="images/adventure.jpg" target="_blank"><img src="images/adventure.jpg" class="about-us-image"></a>
+    <a href="images/cultural.jpg" target="_blank"><img src="images/cultural.jpg" class="about-us-image"></a>
+    <a href="images/safari.jpg" target="_blank"><img src="images/safari.jpg" class="about-us-image"></a>
+    <a href="images/adventure3.jpg" target="_blank"><img src="images/adventure3.jpg" class="about-us-image"></a>
+    <a href="images/cultural3.jpg" target="_blank"><img src="images/cultural3.jpg" class="about-us-image"></a>
+    <a href="images/safari2.jpg" target="_blank"><img src="images/safari2.jpg" class="about-us-image"></a>
+    <a href="images/adventure4.jpg" target="_blank"><img src="images/adventure4.jpg" class="about-us-image"></a>
+    <a href="images/cultural4.jpg" target="_blank"><img src="images/cultural4.jpg" class="about-us-image"></a>
+    <a href="images/adventure5.jpg" target="_blank"><img src="images/adventure5.jpg" class="about-us-image"></a>
+    <a href="images/safari3.jpg" target="_blank"><img src="images/safari3.jpg" class="about-us-image"></a>
+    <a href="images/adventure6.jpg" target="_blank"><img src="images/adventure6.jpg" class="about-us-image"></a>
+    <a href="images/cultural6.jpg" target="_blank"><img src="images/cultural6.jpg" class="about-us-image"></a>
+    <a href="images/safari4.jpg" target="_blank"><img src="images/safari4.jpg" class="about-us-image"></a>
+    <a href="images/adventure7.jpg" target="_blank"><img src="images/adventure7.jpg" class="about-us-image"></a>
+    <a href="images/safari5.jpg" target="_blank"><img src="images/safari5.jpg" class="about-us-image"></a>
+    <a href="images/adventure8.jpg" target="_blank"><img src="images/adventure8.jpg" class="about-us-image"></a>
+    <a href="images/safari6.jpg" target="_blank"><img src="images/safari6.jpg" class="about-us-image"></a>
+    <a href="images/adventure9.jpg" target="_blank"><img src="images/adventure9.jpg" class="about-us-image"></a>
+    <a href="images/safari7.jpg" target="_blank"><img src="images/safari7.jpg" class="about-us-image"></a>
+  </section>
+
+  <!------ Social Media Section -->
+  <section id="SocialMedia" class="section">
+    <h1>Our Socials</h1>
+    <p><strong>Kutsaka Horizon Tours</strong> is contactable via these social media platforms </p>
+	<table style="width: 100%; border-collapse: separate; border-spacing: 30px;">
+  <tr>
+    <td style="
+      padding: 20px;
+      background-image: url('images/safari.jpg');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      height: 300px;
+      vertical-align: top;
+    ">
+
+      <img src="images/facebook.png" alt="Facebook">
+      <h3>Facebook</h3>
+      <a href="https://www.facebook.com/kutsaka.joy.5" style="color: #000; font-weight: bold;">Facebook Link»</a>
+    </td>
+
+    <td style="
+      padding: 20px;
+      background-image: url('images/facebook.png');
+      background-size: cover;
+      background-position: cover;
+      color: white;
+      height: 300px;
+      vertical-align: top;
+    ">
+
+      <img src="images/instagram.jpg" alt="Instagram">
+      <h3>Instagram</h3>
+      <a href="https://www.instagram.com/ta_joy/" style="color: #000; font-weight: bold;">Our Instagram Page »</a>
+    </td>
+
+    <td style="
+      padding: 20px;
+      background-image: url('images/instagram.jpg');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      height: 300px;
+      vertical-align: top;
+    ">
+
+    </td>
+  </tr>
+</table>
+  </section>
+ 
+  <!---- Contact Us-->
+<section id="ContactUs" class="section" style="display: none;">
+
+  <h1>Contact Us</h1>
+  <h3>Let's Go!</h3>
+  <p>Please fill the form below in for bookings or for any information you may require and we will respond promptly.</p>
+
+  <form style="max-width: 600px; margin-top: 20px;">
+    <label for="name">Full Name:</label><br>
+    <input type="text" id="name" name="name" required style="width: 100%; padding: 10px; margin-bottom: 15px;"><br>
+
+    <label for="email">Email Address:</label><br>
+    <input type="email" id="email" name="email" required style="width: 100%; padding: 10px; margin-bottom: 15px;"><br>
+
+    <label for="number">Mobile Number:</label><br>
+    <input type="text" id="number" name="number" required style="width: 100%; padding: 10px; margin-bottom: 15px;"><br>
+
+    <label for="country">Country of Origin:</label><br>
+    <input type="text" id="country" name="country" required style="width: 100%; padding: 10px; margin-bottom: 15px;"><br>
+
+    <label for="date">Date From:</label><br>
+    <input type="date" id="date" name="date" required style="width: 100%; padding: 10px; margin-bottom: 15px;"><br>
+
+    <label for="date">Date To:</label><br>
+    <input type="date" id="date" name="date" required style="width: 100%; padding: 10px; margin-bottom: 15px;"><br>
+
+    <label for="number">Number of Guests:</label><br>
+    <input type="text" id="number" name="number" required style="width: 100%; padding: 10px; margin-bottom: 15px;"><br>
+
+    <label for="questions">Any Questions?:</label><br>
+    <textarea id="questions" name="questions" rows="4" required style="width: 100%; padding: 10px; margin-bottom: 15px;"></textarea><br>
+
+    <button type="submit" style="background-color: #1abc9c; color: white; padding: 10px 20px; border: none; cursor: pointer;">Submit Form</button>
+  </form>
+
+</section>
+
+ 
+<section id="FindYoutour" class="section" style="display: none;">
+  <h1>Find Your Tour</h1>
+  <p>Use the map below to explore our tour destinations across Southern Africa.</p>
+  <div style="width: 100%; height: 400px;">
+    <iframe
+      src="https://www.google.com/maps/d/embed?mid=1X0bq4WX96wG9ey3TCh9WMD4tI-0DbGI&ehbc=2E312F"
+      width="100%"
+      height="100%"
+      style="border:0;"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+</section>
+
+<section id="BecomeaGuide" class="section" style="display: none;">
+
+  <h1>Become a Tour Guide and Offer Your Tours</h1>
+  <p>Join our network of passionate local guides and share your knowledge with travelers from around the world.</p>
+
+  <form style="max-width: 600px; margin-top: 20px;">
+    <label for="name">Full Name:</label><br>
+    <input type="text" id="name" name="name" required style="width: 100%; padding: 10px; margin-bottom: 15px;"><br>
+
+    <label for="email">Email Address:</label><br>
+    <input type="email" id="email" name="email" required style="width: 100%; padding: 10px; margin-bottom: 15px;"><br>
+
+    <label for="location">Your Location:</label><br>
+    <input type="text" id="location" name="location" required style="width: 100%; padding: 10px; margin-bottom: 15px;"><br>
+
+    <label for="experience">Tour Guide Experience:</label><br>
+    <textarea id="experience" name="experience" rows="4" required style="width: 100%; padding: 10px; margin-bottom: 15px;"></textarea><br>
+
+    <label for="price">Your Price Range:</label><br>
+    <textarea id="price" name="price" rows="4" required style="width: 100%; padding: 10px; margin-bottom: 15px;"></textarea><br>
+
+    <button type="submit" style="background-color: #1abc9c; color: white; padding: 10px 20px; border: none; cursor: pointer;">Submit Application</button>
+  </form>
+
+</section>
+<script src="60 (1).js"></script>
+  <script>
+  
+  window.onload = showHome;
+
+function showHome() {
+      document.getElementById('home').style.display = 'block';
+      document.getElementById('about-us').style.display = 'none';
+	  document.getElementById('SocialMedia').style.display = 'none';
+	  document.getElementById('ContactUs').style.display = 'none';
+	  document.getElementById('FindYoutour').style.display = 'none';
+	  document.getElementById('BecomeaGuide').style.display = 'none';
+	  
+    }
+
+  function Login() {
+    document.getElementById('home').style.display = 'none';
+    document.getElementById('about-us').style.display = 'none';
+  document.getElementById('SocialMedia').style.display = 'none';
+  document.getElementById('ContactUs').style.display = 'none';
+  document.getElementById('FindYoutour').style.display = 'none';
+  document.getElementById('BecomeaGuide').style.display = 'none';
+  document.getElementById('Login').style.display = 'block';
+   }
+
+    function showAbout() {
+      document.getElementById('home').style.display = 'none';
+      document.getElementById('about-us').style.display = 'block';
+	  document.getElementById('SocialMedia').style.display = 'none';
+	  document.getElementById('ContactUs').style.display = 'none';
+	  document.getElementById('FindYoutour').style.display = 'none';
+	  document.getElementById('BecomeaGuide').style.display = 'none';
+    }
+	
+	function SocialMedia() {
+      document.getElementById('home').style.display = 'none';
+      document.getElementById('about-us').style.display = 'none';
+	  document.getElementById('SocialMedia').style.display = 'block';
+	  document.getElementById('ContactUs').style.display = 'none';
+	  document.getElementById('FindYoutour').style.display = 'none';
+	  document.getElementById('BecomeaGuide').style.display = 'none';
+    }
+	function ContactUs(){
+	  document.getElementById('home').style.display = 'none';
+      document.getElementById('about-us').style.display = 'none';
+	  document.getElementById('SocialMedia').style.display = 'none';
+	  document.getElementById('ContactUs').style.display = 'block';
+	  document.getElementById('FindYoutour').style.display = 'none';
+	  document.getElementById('BecomeaGuide').style.display = 'none';
+	}
+	function FindYoutour(){
+	  document.getElementById('home').style.display = 'none';
+      document.getElementById('about-us').style.display = 'none';
+	  document.getElementById('SocialMedia').style.display = 'none';
+	  document.getElementById('ContactUs').style.display = 'none';
+	  document.getElementById('FindYoutour').style.display = 'block';
+document.getElementById('BecomeaGuide').style.display = 'none';	  
+	}
+	function BecomeaGuide(){
+	  document.getElementById('home').style.display = 'none';
+      document.getElementById('about-us').style.display = 'none';
+	  document.getElementById('SocialMedia').style.display = 'none';
+	  document.getElementById('ContactUs').style.display = 'none';
+	  document.getElementById('FindYoutour').style.display = 'none';
+	  document.getElementById('BecomeaGuide').style.display = 'block';
+	  
+	}
+
+  </script>
+
+</body>
+</html>
+

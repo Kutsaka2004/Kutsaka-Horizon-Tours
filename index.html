@@ -70,6 +70,7 @@
     <a onclick="BecomeaGuide()">Become a Guide</a>
     <a onclick="showAbout()">About Us</a>
     <a onclick="SocialMedia()">Social Media</a>
+    <a onclick="Feedback()">Feedback</a>
   </nav>
 
 
@@ -301,7 +302,7 @@
 
 </section>
 
- 
+ <!---- Find Your Tour-->
 <section id="FindYoutour" class="section" style="display: none;">
   <h1>Find Your Tour</h1>
   <p>Use the map below to explore our tour destinations across Southern Africa.</p>
@@ -318,8 +319,8 @@
   </div>
 </section>
 
+<!---- Become a Guide-->
 <section id="BecomeaGuide" class="section" style="display: none;">
-
   <h1>Become a Tour Guide and Offer Your Tours</h1>
   <p>Join our network of passionate local guides and share your knowledge with travelers from around the world.</p>
 
@@ -336,13 +337,37 @@
     <label for="experience">Tour Guide Experience:</label><br>
     <textarea id="experience" name="experience" rows="4" required style="width: 100%; padding: 10px; margin-bottom: 15px;"></textarea><br>
 
-    <label for="price">Your Price Range:</label><br>
-    <textarea id="price" name="price" rows="4" required style="width: 100%; padding: 10px; margin-bottom: 15px;"></textarea><br>
+    <label for="specialties">Your Specialties:</label><br>
+    <textarea id="specialties" name="specialties" rows="4" required style="width: 100%; padding: 10px; margin-bottom: 15px;"></textarea><br>
+
+    <label for="pricing">Pricing:</label><br>
+    <input type="text" id="pricing" name="pricing" required style="width: 100%; padding: 10px; margin-bottom: 15px;"><br>
+
+    <label for="availability">Availability:</label><br>
+    <input type="text" id="availability" name="availability" required style="width: 100%; padding: 10px; margin-bottom: 15px;"><br>
 
     <button type="submit" style="background-color: #1abc9c; color: white; padding: 10px 20px; border: none; cursor: pointer;">Submit Application</button>
   </form>
-
 </section>
+
+<!---- Feedback-->
+<section id="Feedback" class="section" style="display: none;">
+  <h1>Guide Feedback</h1>
+
+  <form style="max-width: 600px; margin-top: 20px;">
+    <label for="name">Full Name:</label><br>
+    <input type="text" id="name" name="name" required style="width: 100%; padding: 10px; margin-bottom: 15px;"><br>
+
+    <label for="email">Email Address:</label><br>
+    <input type="email" id="email" name="email" required style="width: 100%; padding: 10px; margin-bottom: 15px;"><br>
+
+    <label for="feedback">Feedback:</label><br>
+    <textarea id="feedback" name="feedback" rows="4" required style="width: 100%; padding: 10px; margin-bottom: 15px;"></textarea><br>
+
+<button type="submit" style="background-color: #1abc9c; color: white; padding: 10px 20px; border: none; cursor: pointer;">Submit Feedback</button>
+</form>
+</section>
+
 <script src="60 (1).js"></script>
   <script>
   
@@ -355,6 +380,7 @@ function showHome() {
 	  document.getElementById('ContactUs').style.display = 'none';
 	  document.getElementById('FindYoutour').style.display = 'none';
 	  document.getElementById('BecomeaGuide').style.display = 'none';
+    document.getElementById('Feedback').style.display = 'none';
 	  
     }
 
@@ -366,6 +392,7 @@ function showHome() {
   document.getElementById('FindYoutour').style.display = 'none';
   document.getElementById('BecomeaGuide').style.display = 'none';
   document.getElementById('Login').style.display = 'block';
+  document.getElementById('Feedback').style.display = 'none';
    }
 
     function showAbout() {
@@ -375,6 +402,7 @@ function showHome() {
 	  document.getElementById('ContactUs').style.display = 'none';
 	  document.getElementById('FindYoutour').style.display = 'none';
 	  document.getElementById('BecomeaGuide').style.display = 'none';
+    document.getElementById('Feedback').style.display = 'none';
     }
 	
 	function SocialMedia() {
@@ -384,6 +412,7 @@ function showHome() {
 	  document.getElementById('ContactUs').style.display = 'none';
 	  document.getElementById('FindYoutour').style.display = 'none';
 	  document.getElementById('BecomeaGuide').style.display = 'none';
+    document.getElementById('Feedback').style.display = 'none';
     }
 	function ContactUs(){
 	  document.getElementById('home').style.display = 'none';
@@ -392,6 +421,7 @@ function showHome() {
 	  document.getElementById('ContactUs').style.display = 'block';
 	  document.getElementById('FindYoutour').style.display = 'none';
 	  document.getElementById('BecomeaGuide').style.display = 'none';
+    document.getElementById('Feedback').style.display = 'none';
 	}
 	function FindYoutour(){
 	  document.getElementById('home').style.display = 'none';
@@ -399,7 +429,8 @@ function showHome() {
 	  document.getElementById('SocialMedia').style.display = 'none';
 	  document.getElementById('ContactUs').style.display = 'none';
 	  document.getElementById('FindYoutour').style.display = 'block';
-document.getElementById('BecomeaGuide').style.display = 'none';	  
+document.getElementById('BecomeaGuide').style.display = 'none';	
+document.getElementById('Feedback').style.display = 'none';  
 	}
 	function BecomeaGuide(){
 	  document.getElementById('home').style.display = 'none';
@@ -408,10 +439,21 @@ document.getElementById('BecomeaGuide').style.display = 'none';
 	  document.getElementById('ContactUs').style.display = 'none';
 	  document.getElementById('FindYoutour').style.display = 'none';
 	  document.getElementById('BecomeaGuide').style.display = 'block';
+    document.getElementById('Feedback').style.display = 'none';
 	  
 	}
+  function Feedback(){
+	  document.getElementById('home').style.display = 'none';
+      document.getElementById('about-us').style.display = 'none';
+	  document.getElementById('SocialMedia').style.display = 'none';
+	  document.getElementById('ContactUs').style.display = 'none';
+	  document.getElementById('FindYoutour').style.display = 'none';
+	  document.getElementById('BecomeaGuide').style.display = 'none';
+    document.getElementById('Feedback').style.display = 'block';
+  }
 
   </script>
+
 
 </body>
 </html>
